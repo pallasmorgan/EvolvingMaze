@@ -1,0 +1,47 @@
+Team Member 1: Maze Generation & Dynamic Updates
+Responsibilities:
+
+Implement Perfect Maze Generation using Recursive Backtracking or Prim’s Algorithm.
+Ensure the maze adheres to the "perfect maze" rule (one unique path between any two points).
+Develop the Dynamic Maze Updates system to open/close paths randomly or based on predefined rules.
+Ensure agents can adapt to changes in the environment (e.g., shifting end goals).
+Deliverables:
+Python module for maze generation and updates.
+Initial visualization of the generated maze for validation.
+Integration with agent pathfinding for real-time updates.
+
+
+Team Member 2: Multi-Agent Pathfinding with Swarm Intelligence
+Responsibilities:
+
+Research and implement Swarm Intelligence techniques (Ant Colony Optimization, Boids, etc.) for multi-agent navigation.
+Implement agent behaviors such as alignment, separation, and cohesion to optimize pathfinding.
+Ensure agents avoid collisions and efficiently reach their destinations.
+Deliverables:
+Swarm-based pathfinding module.
+Performance evaluation under static vs. dynamic maze conditions.
+Adaptive decision-making logic for agents based on real-time maze changes.
+
+
+Team Member 3: Visualization, Optimization & Report
+Responsibilities:
+
+Develop real-time visualization using Pygame to display agents and the evolving maze.
+Optimize the algorithm for efficiency and scalability.
+Document the entire process, including methodology, challenges, and results.
+Prepare the final report with metrics (e.g., path cost, time, adaptability).
+Deliverables:
+Fully functional visualization of agent movement & maze changes.
+Optimized code for better performance.
+Well-structured report covering implementation details and evaluation.
+
+
+
+
+
+
+
+
+
+
+Sear
