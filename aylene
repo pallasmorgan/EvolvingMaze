@@ -1,0 +1,101 @@
+#470 Group project 1
+# Morgan Aylene Jack
+
+# prims algorithm
+#purpose: maze with no loops and exactly one path between any two points
+import random
+import pygame
+import time
+import sys
+
+# dimensions for maze
+WIDTH, HEIGHT = 41,41
+
+# Colors
+WHITE = (255, 255, 255)
+PURPLE = (128,0,128)
+YELLOW = (255,255,0)
+BLACK = (0,0,0)
+
+#  cell states using binary 
+WALL = 1
+PATH = 0
+
+# directions for movement (row, col)
+DIRECTIONS =[(-2,0),(2,0),(0,-2),(0,2)]
+
+# initialize
+pygame.init()
+CELL_SIZE = 20
+SCREEN = pygame.display.set_model((WIDTH*CELL_SIZE,HEIGHT * CELL_SIZE))
+pygame.display.set_caption("Dynamic Maze with Prim's Algorithm")
+
+def create_empty_grid(width, height):
+    ##creates a grid filled with walls
+    return [[WALL for _ in range(width)]for _ in range(height)]
+
+def is_valid_cell(x,y):
+    #checks if a cell is inside the grid
+    return 0 <= x < HEIGHT and 0 <= y < WIDTH
+
+def generate_maze():
+    # generates perfect maze using Prims Algorithm
+    maze = create_empty_grid(WIDTH, HEIGHT)
+    start_x, start_y = random.randrange(1, HEIGHT, 2), random.randrange(1,WIDTH,2)
+    maze[start_x][start_y] = PATH
+
+    walls = [(start_x + dx, start_y +dy) for dx, dy in DIRECTIONS if is_valid_cell(start_x +dx, start_y +dy)]
+    random.shuffle(walls)
+
+    while walls:
+        wx, wy = walls.pop()
+        if maze[wx][wy] == WALL:
+            neighbors = [(wx +dx, wy+dy) for dx, dy in DIRECTIONS if is_valid_cell(wx +dx, wy+dy)]
+            paths = [cell for cell in neighbors if is_valid_cell(cell[0], cell[1]) and maze[cell[0]][cell[1]]==PATH]
+
+            if paths:
+                px, py = random.choice(paths)
+                maze[wx][wy] = PATH
+                maze[(wx +px)//2][(wy + py)//2] =PATH
+                walls.extend([(wx + dx, wy +dy)for dx, dy in DIRECTIONS if is_valid_cell(wx + dx, wy +dy)])
+                random.shuffle(walls)
+
+    return maze
+
+def draw_maze(maze):
+    #Draws the maze using Pygame
+    SCREEN.fill(BLACK)
+    for row in range(HEIGHT):
+        for col in range(WIDTH):
+            color = WHITE if maze[row][col] == PATH else BLACK
+            pygame.draw.rect(SCREEN)
+    pygame.display.update()
+
+def update_maze_randomly(maze):
+    #randomly opens and closes walls while maintaining connectivity
+    for _ in range(5):
+        x, y = random.randrange(1,HEIGHT, 2), random.randrange(1,WIDTH,2)
+        if random.random() < 0.5:
+            maze[x][y] = PATH
+        else:
+            maze[x][y] = WALL
+    return maze
+
+def main():
+    maze = generate_maze()
+    running = True
+
+    while running: 
+        draw_maze(maze)
+        for event in pygame.event.get():
+            if event.type == pygame.QUIT:
+                running = False
+        
+        time.sleep(2)
+        maze = update_maze_randomly(maze)
+    
+    pygame.quit()
+
+if __name__ == "__main__":
+    main()
+
