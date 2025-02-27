@@ -1,8 +1,7 @@
-# Project Name
+#  Evolving Maze with Swarm Intelligence
 ---
 ## Description
-A brief explanation of what this project does and why it exists.
-
+The evolving maze project generates a rando maze using a depth-first search approach and updates the maze dynamically with changing walls. Multipe agents are managed by Swarm Intelligence to navigate through the maze using A* algorithem. 
 ## Table of Contents
 - [Installation](#installation)
 - [Usage](#usage)
@@ -15,13 +14,13 @@ A brief explanation of what this project does and why it exists.
 ## Installation
 1. Clone the repository:
    ```sh
-   git clone https://github.com/yourusername/project-name.git
+   git clone (https://github.com/pallasmorgan/EvolvingMaze.git)
 	```
 
 2. Navigate to the project directory:
     
     ```sh
-    cd project-name
+    cd Evolvingmaze
     ```
     
 3. Install dependencies (if applicable):
