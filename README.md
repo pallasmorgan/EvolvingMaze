@@ -27,7 +27,7 @@ The evolving maze project generates a rando maze using a depth-first search appr
     
     ```sh
     pip install -r requirements.txt  # For Python
-    npm install  # For Node.js
+   
     ```
     
 
@@ -36,23 +36,24 @@ The evolving maze project generates a rando maze using a depth-first search appr
 Run the program with:
 
 ```sh
-python main.py  # Python
-./run.sh        # Shell script
-node index.js   # JavaScript
+python boids_op.py  # Python
 ```
 
 ## Features
 
-- Feature 1
-- Feature 2
-- Feature 3
+1)Implements swarm intelligence for navigating a dynamic maze.
+
+2)Uses the A* algorithm for pathfinding.
+
+3)Real-time visualization using Pygame.
+
+4)Dynamically changing obstacles that force adaptive navigation.
+
+5)Tracks performance metrics such as path cost and collision avoidance.
 
 ## Technologies Used
 
 - Python 3.10
-- Flask
-- PostgreSQL
-- Docker
 
 ## Contributing
 
@@ -66,9 +67,9 @@ Contributions are welcome! Follow these steps:
 
 ## License
 
-This project is licensed under the MIT License - see the LICENSE file for details.
+This project is for CSCI 470
 
 ## Contact
 
-- GitHub: [@yourusername](https://github.com/yourusername)
-- Email: [your.email@example.com](mailto:your.email@example.com)
+- GitHub: @pallasmorgan, 
+- Email: pallasmv@g.cofc.edu, mcentireak@g.cofc.edu, keimjm@g.cofc.edu
