@@ -36,7 +36,7 @@ The evolving maze project generates a rando maze using a depth-first search appr
 Run the program with:
 
 ```sh
-python boids_op.py  # Python
+python boids_opt.py  # Python
 ```
 
 ## Features
@@ -59,11 +59,7 @@ python boids_op.py  # Python
 
 Contributions are welcome! Follow these steps:
 
-4. Fork the repo
-5. Create a new branch (`git checkout -b feature-name`)
-6. Commit your changes (`git commit -m "Added feature"`)
-7. Push to the branch (`git push origin feature-name`)
-8. Open a Pull Request
+6) Done on one file.
 
 ## License
 
@@ -71,5 +67,5 @@ This project is for CSCI 470
 
 ## Contact
 
-- GitHub: @pallasmorgan, 
+- GitHub: @pallasmorgan, @aylenemce, @jacko123456
 - Email: pallasmv@g.cofc.edu, mcentireak@g.cofc.edu, keimjm@g.cofc.edu
