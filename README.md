@@ -53,14 +53,22 @@ python boids_opt.py  # Python
 
 ## Technologies Used
 
-- Python 3.10
+- Python 3.13
 
 ## Contributing
 
 Contributions are welcome! Follow these steps:
+Prim's Algorithm- Aylene
+Optimization algorithms and Swarm - Jack
+Document, Slides and ReadMe - Morgan
 
-6) Done on one file.
-
+## Output Example
+Agent is on a wall at (4, 0). Replanning path.
+Target (0, 19) is unreachable (it's a wall).
+Total Path Cost: 50
+Total Collisions: 0
+Steps to Completion: 1290
+Replanning Count: 5
 ## License
 
 This project is for CSCI 470
